@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@4/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+    <!-- Container -->
+    <div class="container">
+
+        <!-- Swiper -->
+        <div class="swiper-container swiper-main">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide__overlay">
+                        <div class="slide__wrap">
+                            <div class="slide__title" data-swiper-animation="animate__backInLeft" data-duration=".5s">
+                                СЛАВНЫЙ ЗАГОЛОВОК
+                                СЛАВНОГО ОФИСА №1
+                            </div>
+                        </div>
+
+                    </div>
+                    <img src="img/01.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide__overlay">
+                        <div class="slide__wrap">
+                            <div class="slide__title" data-swiper-animation="animate__bounceIn" data-duration=".5s">
+                                СЛАВНЫЙ ЗАГОЛОВОК
+                                СЛАВНОГО ОФИСА №2
+                            </div>
+                        </div>
+
+                    </div>
+                    <img src="img/01.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide__overlay">
+                        <div class="slide__wrap">
+                            <div class="slide__title" data-swiper-animation="animate__fadeInLeft" data-duration=".5s">
+                                СЛАВНЫЙ ЗАГОЛОВОК
+                                СЛАВНОГО ОФИСА №3
+                            </div>
+                        </div>
+
+                    </div>
+                    <img src="img/01.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide__overlay">
+                        <div class="slide__wrap">
+                            <div class="slide__title" data-swiper-animation="animate__fadeInUp" data-duration=".5s">
+                                СЛАВНЫЙ ЗАГОЛОВОК
+                                СЛАВНОГО ОФИСА №4
+                            </div>
+                        </div>
+
+                    </div>
+                    <img src="img/01.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide__overlay">
+                        <div class="slide__wrap">
+                            <div class="slide__title" data-swiper-animation="animate__fadeInDown" data-duration=".5s">
+                                СЛАВНЫЙ ЗАГОЛОВОК
+                                СЛАВНОГО ОФИСА №5
+                            </div>
+                        </div>
+
+                    </div>
+                    <img src="img/01.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide__overlay">
+                        <div class="slide__wrap">
+                            <div class="slide__title" data-swiper-animation="animate__bounceInRight"
+                                data-duration=".5s">
+                                СЛАВНЫЙ ЗАГОЛОВОК
+                                СЛАВНОГО ОФИСА №6
+                            </div>
+                        </div>
+
+                    </div>
+                    <img src="img/01.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide__overlay">
+                        <div class="slide__wrap">
+                            <div class="slide__title" data-swiper-animation="animate__fadeInDownBig"
+                                data-duration=".5s">
+                                СЛАВНЫЙ ЗАГОЛОВОК
+                                СЛАВНОГО ОФИСА №7
+                            </div>
+                        </div>
+
+                    </div>
+                    <img src="img/01.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@cycjimmy/swiper-animation@4/dist/swiper-animation.umd.min.js"></script>
+
+
+
+    <!-- Initialize Swiper -->
+    <script>
+        const swiperAnimation = new SwiperAnimation();
+        const mySwiper = new Swiper('.swiper-main', {
+            on: {
+                init: function () {
+                    swiperAnimation.init(this).animate();
+                },
+                slideChange: function () {
+                    swiperAnimation.init(this).animate();
+                }
+            }
+        });
+    </script>
+
+
+    <!-- Style CSS -->
+    <style>
+        body {
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .slide__overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin-bottom: 2px;
+            padding: calc(15px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
+            padding-left: calc(15px + (100 - 20) * ((100vw - 320px) / (1920 - 320)));
+            padding-right: calc(15px + (100 - 20) * ((100vw - 320px) / (1920 - 320)));
+            background-image: linear-gradient(to top, #1b171c5e, #22192540),
+                linear-gradient(to bottom, #501b6400, #501b6400);
+        }
+
+        .swiper-slide img {
+            width: 100%;
+        }
+
+        .slide__wrap {
+            display: flex;
+            align-items: flex-end;
+            height: 100%;
+        }
+
+        .slide__title {
+            font-size: calc(18px + (70 - 20) * ((100vw - 320px) / (1920 - 320)));
+            color: #fff;
+            text-transform: uppercase;
+            white-space: pre-line;
+        }
+    </style>
+</body>
+
+</html>
